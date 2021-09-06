@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import Alamofire
 
 public func getName() -> String {
     return "Alamo"
+}
+
+public func getData() {
+    Alamofire.request("https://httpbin.org/get")
 }
