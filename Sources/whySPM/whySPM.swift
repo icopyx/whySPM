@@ -3,6 +3,6 @@ struct whySPM {
 }
 
 
-func myName() -> String {
+public func myName() -> String {
     return "Hong"
 }
