@@ -13,5 +13,13 @@ public func getName() -> String {
 }
 
 public func getData() {
-    Alamofire.request("https://httpbin.org/get")
+    Alamofire.AF.request("https://httpbin.org/get") {
+        urlRequest in
+        urlRequest.timeoutInterval = 5
+        urlRequest.allowsConstrainedNetworkAccess = false
+    }.response {
+        response in
+        debugPrint(response)
+    }
+    
 }
